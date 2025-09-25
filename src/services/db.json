@@ -1,0 +1,63 @@
+{
+  "usuarios": [
+    {
+      "id": "2d41",
+      "nombre": "hff",
+      "correo": "udj",
+      "clave": "hds"
+    },
+    {
+      "id": "21ae",
+      "nombre": "Mariana",
+      "correo": "mariana@gmail.com",
+      "clave": "Marii"
+    },
+    {
+      "id": "bf23",
+      "nombre": "Prueba",
+      "correo": "prueba@gmail.com",
+      "clave": "123"
+    },
+    {
+      "id": "588e",
+      "nombre": "mari",
+      "correo": "mari",
+      "clave": "11"
+    },
+    {
+      "id": "ae2d",
+      "nombre": "mari",
+      "correo": "mari",
+      "clave": "11"
+    }
+  ],
+  "productos": [
+    {
+      "id": "00c6",
+      "nombre": "Botellas plásticas",
+      "imagen": "https://www.elpais.cr/wp-content/uploads/2023/04/Botellas-de-plastico.jpeg",
+      "precio": "2000",
+      "categoria": "Plásticos",
+      "descripcion": "Botellas reciclables",
+      "peso": "10"
+    },
+    {
+      "id": "412d",
+      "nombre": "plastico",
+      "imagen": "https://cdn.pixabay.com/photo/2024/11/21/16/21/plastic-bottles-9214183_1280.png",
+      "precio": "200",
+      "categoria": "plastico",
+      "descripcion": "es platico para reciclar",
+      "peso": "12 kg"
+    },
+    {
+      "id": "45b0",
+      "nombre": "plastico",
+      "imagen": "https://cdn.pixabay.com/photo/2024/11/21/16/21/plastic-bottles-9214183_1280.png",
+      "precio": "200",
+      "categoria": "plastico",
+      "descripcion": "es platico para reciclar",
+      "peso": "12 kg"
+    }
+  ]
+}

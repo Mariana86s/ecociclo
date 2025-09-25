@@ -1,0 +1,11 @@
+.search-bar{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.search-button{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 20px;
+}
