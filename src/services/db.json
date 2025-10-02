@@ -1,16 +1,6 @@
 {
   "usuarios": [
     {
-      "id": "21ae",
-      "nombre": "Mariana",
-      "correo": "mariana@gmail.com",
-      "clave": "Marii",
-      "rol": "usuario",
-      "descripcion": "Me gusta reciclar y cuidar el planeta",
-      "ubicacion": "San Jose, Costa Rica",
-      "fechaRegistro": "2024-06-10"
-    },
-    {
       "id": "bf23",
       "nombre": "Prueba",
       "correo": "prueba@gmail.com",
@@ -18,18 +8,9 @@
       "rol": "admin"
     },
     {
-      "id": "588e",
-      "nombre": "mari",
-      "correo": "mari",
-      "clave": "11",
-      "rol": "usuario",
-      "descripcion": "holi",
-      "ubicacion": "Ubicación no proporcionada"
-    },
-    {
-      "id": "0e03",
-      "nombre": "mari",
-      "correo": "mari",
+      "id": "882a",
+      "nombre": "pepe",
+      "correo": "pepe@gmail.com",
       "clave": "11",
       "rol": "usuario"
     }
@@ -58,6 +39,30 @@
       "direccion": "carton",
       "idUsuario": "588e",
       "correoUsuario": "mari"
+    },
+    {
+      "id": "e3b5",
+      "nombre": "papel reciclado",
+      "imagen": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fdical.es%2Fblog%2Fque-es%2Fdiferencia-entre-papel-ecologico-y-reciclado&psig=AOvVaw3gn5FhF8FCv-2huzINyEEK&ust=1759481813757000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIiHjtaShZADFQAAAAAdAAAAABAE",
+      "precio": "",
+      "categoria": "",
+      "descripcion": "",
+      "peso": "",
+      "direccion": "",
+      "idUsuario": "882a",
+      "correoUsuario": "pepe@gmail.com"
+    },
+    {
+      "id": "4d23",
+      "nombre": "Carton y papel",
+      "imagen": "https://www.google.com/url?sa=i&url=https%3A%2F%2Firmasolandalucia.com%2Fpapel-y-carton-y-su-gestion-de-residuos%2F&psig=AOvVaw37u7n29btAHTKY1mVHsxKH&ust=1759482359113000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMCyk9qUhZADFQAAAAAdAAAAABAE",
+      "precio": "₡ 2200",
+      "categoria": "carton",
+      "descripcion": "carton",
+      "peso": "1kg",
+      "direccion": "a  la vuelta de la esquina",
+      "idUsuario": "2f48",
+      "correoUsuario": "lili"
     }
   ],
   "comentarios": [

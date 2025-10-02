@@ -1,93 +1,167 @@
-.contAdmin {
+/* AdminPage.css - Estilos mejorados: columnas a la par, mismo tamaño y sin fondo blanco fuerte */
+
+:root{
+  --page-start: #eaf6ff;   /* fondo sutil */
+  --page-end:   #f7fbfd;
+  --panel-left: linear-gradient(180deg,#f0fbf9,#e8f7f2); /* izquierda (verde suave) */
+  --panel-right: linear-gradient(180deg,#f7f6ff,#f0ecff); /* derecha (violeta suave) */
+  --card-gradient: linear-gradient(135deg,#3b82f6,#06b6d4); /* tarjetas de métricas */
+  --text: #0f1724;
+  --muted: #6b7280;
+  --shadow: 0 8px 24px rgba(12,24,40,0.06);
+  --radius: 14px;
+  font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+}
+
+/* Contenedor general */
+.contAdmin{
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  min-height: 100vh;
+  align-items: stretch; /* las columnas tendrán la misma altura */
+  box-sizing: border-box;
+  background: linear-gradient(180deg,var(--page-start), var(--page-end));
+}
+
+/* Columnas: ambas con flex:1 para ser del mismo tamaño */
+.colIzq, .colDer{
+  flex: 1;                /* igual ancho */
+  border-radius: var(--radius);
+  padding: 22px;
   display: flex;
   flex-direction: column;
-  padding: 30px;
-  background-color: #f0f2f5;
-  min-height: 100vh;
-  box-sizing: border-box;
-  gap: 20px;
+  gap: 18px;
+  box-shadow: var(--shadow);
+  min-height: 520px;      /* igual altura mínima */
 }
 
-.filaSuperior {
+/* Diferenciar ligeramente con tonos suaves (NO blanco sólido) */
+.colIzq{
+  background: var(--panel-left);
+  border: 1px solid rgba(10,20,30,0.03);
+}
+.colDer{
+  background: var(--panel-right);
+  border: 1px solid rgba(10,20,30,0.03);
+}
+
+/* Titulos seccion */
+.section-title{
+  font-size: 18px;
+  color: var(--text);
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Admin panel wrapper */
+.admin-panel{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 20px; 
-  align-items: stretch; 
+  flex-direction: column;
+  gap: 12px;
 }
 
-
-.adminCompWrapper {
-  flex: 0 0 48%; 
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-}
-
-.formularioWrapper {
-  flex: 0 0 48%; 
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-}
-
-.colInferior {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-.admin-titulo {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.admin-metricas {
+/* Header del panel (titulo + acciones si las tuvieras) */
+.admin-header{
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
 }
 
-.admin-card {
-  flex: 1;
-  background-color: #ffffff;
-  padding: 15px 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+/* Titulo principal del panel */
+.admin-titulo{
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0;
 }
 
-.admin-label {
-  font-weight: 600;
-  color: #555;
+/* Métricas: uso de grid para igualar tarjetas */
+.admin-metricas{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  align-items: stretch; /* tarjetas misma altura */
 }
 
-.admin-valor {
-  font-size: 1.4rem;
-  color: #222;
+/* Tarjeta de métrica */
+.admin-card{
+  border-radius: 12px;
+  padding: 18px;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(12,24,40,0.06);
+  color: #fff;
+  background: var(--card-gradient);
 }
 
-@media (max-width: 768px) {
-  .filaSuperior {
-    flex-direction: column;
-  }
+/* texto dentro de card */
+.admin-label{
+  font-size: 13px;
+  opacity: 0.95;
+}
+.admin-valor{
+  font-size: 28px;
+  font-weight: 800;
+  margin-top: 8px;
+}
 
-  .adminCompWrapper,
-  .formularioWrapper,
-  .colInferior {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+/* Lista de usuarios: estilo limpio que encaja con fondo no blanco */
+.lista-usuarios{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  /* fondo transparente: ya está dentro de colDer */
+}
 
-  .admin-metricas {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+/* Contenedor que debe envolver el map de usuarios */
+.user-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 360px;
+  overflow: auto;
+  padding-right: 6px; /* espacio para scrollbar */
+}
+
+/* Cada elemento usuario */
+.user-card{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 10px;
+  /* ligero contraste, sin blanco sólido */
+  background: rgba(255,255,255,0.6); 
+  box-shadow: 0 4px 10px rgba(12,24,40,0.04);
+  border: 1px solid rgba(10,20,30,0.03);
+}
+
+/* Avatar simple */
+.user-avatar{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  background: linear-gradient(135deg,#ffffff,#f3f6fa);
+  color: #102a43;
+}
+
+/* textos usuario */
+.user-name{ font-weight: 700; color: var(--text); }
+.user-email{ font-size: 13px; color: var(--muted); }
+
+/* responsive: columnas apilan en pantallas pequeñas */
+@media (max-width: 920px){
+  .contAdmin{ flex-direction: column; padding: 18px; }
+  .colIzq, .colDer{ min-height: auto; }
+  .admin-metricas{ grid-template-columns: 1fr; }
+  .user-list{ max-height: 240px; }
 }
