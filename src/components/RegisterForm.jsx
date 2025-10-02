@@ -10,17 +10,14 @@ export default function RegisterForm() {
       const obj = {
       nombre: nombreUsuario,
       correo: correoUsuario,
-      clave: claveUsuario
+      clave: claveUsuario,
+      rol: "usuario"
+
       }
     await postData("usuarios", obj)
-    /*
-      Crear un obj
-
-      Usar la funcion postData que esta dentro de fetch.js
-
-      Usar esa funcion en el boton
-    */
+    alert("Usuario registrado con exito")
   }
+
 
   return (
     <div className="form-container">

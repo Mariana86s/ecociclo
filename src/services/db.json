@@ -29,35 +29,96 @@
       "nombre": "mari",
       "correo": "mari",
       "clave": "11"
+    },
+    {
+      "id": "0e03",
+      "nombre": "mari",
+      "correo": "mari",
+      "clave": "11",
+      "rol": "usuario"
     }
   ],
   "productos": [
     {
-      "id": "00c6",
-      "nombre": "Botellas plásticas",
-      "imagen": "https://www.elpais.cr/wp-content/uploads/2023/04/Botellas-de-plastico.jpeg",
-      "precio": "2000",
-      "categoria": "Plásticos",
-      "descripcion": "Botellas reciclables",
-      "peso": "10"
+      "id": "10ba",
+      "nombre": "Botellas",
+      "imagen": "https://content.nationalgeographic.com.es/medio/2024/01/10/agua_5f951a89_1891435948_240110124649_1280x853.jpg",
+      "precio": "6999",
+      "categoria": "plastico",
+      "descripcion": "Botellas plásticas",
+      "peso": "100",
+      "direccion": "En el Río Virilla",
+      "idUsuario": "21ae",
+      "correoUsuario": "mariana@gmail.com"
     },
     {
-      "id": "412d",
-      "nombre": "plastico",
-      "imagen": "https://cdn.pixabay.com/photo/2024/11/21/16/21/plastic-bottles-9214183_1280.png",
-      "precio": "200",
-      "categoria": "plastico",
-      "descripcion": "es platico para reciclar",
-      "peso": "12 kg"
+      "id": "6d5f",
+      "nombre": "Carton",
+      "imagen": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fkartox.com%2Flas-diferentes-tipos-de-carton-ondulado&psig=AOvVaw0joVmCE7YFAl68kEkkFqB_&ust=1759348151833000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJDbyeGggZADFQAAAAAdAAAAABAE",
+      "precio": "₡2000",
+      "categoria": "carton",
+      "descripcion": "carton",
+      "peso": "1kg",
+      "direccion": "carton",
+      "idUsuario": "588e",
+      "correoUsuario": "mari"
+    }
+  ],
+  "comentarios": [
+    {
+      "id": "3f93",
+      "comentario": "sssdad",
+      "idProducto": "10ba"
     },
     {
-      "id": "45b0",
-      "nombre": "plastico",
-      "imagen": "https://cdn.pixabay.com/photo/2024/11/21/16/21/plastic-bottles-9214183_1280.png",
-      "precio": "200",
-      "categoria": "plastico",
-      "descripcion": "es platico para reciclar",
-      "peso": "12 kg"
+      "id": "da7c",
+      "comentario": "mariana",
+      "idProducto": "10ba"
+    },
+    {
+      "id": "b25e",
+      "comentario": "holaa",
+      "idProducto": "10ba"
+    },
+    {
+      "id": "29b4",
+      "comentario": "hola",
+      "idProducto": "10ba"
+    },
+    {
+      "id": "b82f",
+      "comentario": "jj",
+      "idProducto": "10ba"
+    },
+    {
+      "id": "1d13",
+      "comentario": "ss",
+      "idProducto": "10ba"
+    },
+    {
+      "id": "c907",
+      "comentario": "sss",
+      "idProducto": "10ba"
+    },
+    {
+      "id": "8b89",
+      "comentario": "jj",
+      "idProducto": "10ba"
+    },
+    {
+      "id": "7cf7",
+      "comentario": "",
+      "idProducto": "10ba"
+    },
+    {
+      "id": "268f",
+      "comentario": "jss",
+      "idProducto": "10ba"
+    },
+    {
+      "id": "c66a",
+      "comentario": "quiero las botellas",
+      "idProducto": "10ba"
     }
   ]
 }

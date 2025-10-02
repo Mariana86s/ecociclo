@@ -1,0 +1,73 @@
+.impacto-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f0f2f5;
+  box-sizing: border-box;
+}
+
+.impacto-contenedor {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.otro-componente {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.impacto-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.impacto-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.impacto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.impacto-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.impacto-producto-imagen {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .impacto-layout {
+    flex-direction: column;
+  }
+
+  .impacto-contenedor,
+  .otro-componente {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .impacto-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -14,6 +14,21 @@ async function postData(endpoint,obj) {
   }
     
 }
+async function deleteData(endpoint,id) {
+  try {
+      const peticion = await fetch(`http://localhost:3001/${endpoint}/${id}`,{
+          method: 'DELETE',
+          headers:{
+              'Content-Type': 'application/json'
+          }
+      })
+      const respuesta = await peticion.json()
+      console.log(respuesta);
+  } catch (error) {
+     console.error(error);
+  }
+    
+}
 
 async function getData(endpoint) {
   try {
@@ -31,4 +46,4 @@ async function getData(endpoint) {
   }
     
 }
-export {postData,getData}
+export {postData,getData,deleteData}

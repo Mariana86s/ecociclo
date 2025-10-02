@@ -11,11 +11,18 @@ export default function LoginForm() {
         const usuariosGuardados = await getData("usuarios")
         console.log(usuariosGuardados);
         
-        const validarUsuario = usuariosGuardados.find((usuario)=>usuario.correo == correo && usuario.clave == clave)
+        const validarUsuario = usuariosGuardados.find((usuario)=>usuario.correo == correo && usuario.clave == clave && usuario.rol == "usuario")
+        const validarUsuarioAdmin = usuariosGuardados.find((usuario)=>usuario.correo == correo && usuario.clave == clave && usuario.rol == "admin")
 
         if (validarUsuario) {
-            alert("Usuario Valido")
+            localStorage.setItem("idUsuario",validarUsuario.id);
+            localStorage.setItem("usuario",JSON.stringify(validarUsuario));
             navigate("/principal")
+        }
+         if (validarUsuarioAdmin) {
+            localStorage.setItem("idUsuario",validarUsuarioAdmin.id);
+            localStorage.setItem("usuario",JSON.stringify(validarUsuarioAdmin));
+            navigate("/admin")
         }
     }
 

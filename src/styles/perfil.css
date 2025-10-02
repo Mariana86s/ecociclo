@@ -1,0 +1,155 @@
+/* CONTENEDOR PRINCIPAL */
+.perfil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 👈 Centra verticalmente si hay espacio */
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: linear-gradient(to right, #d0f0f9, #e6f7ff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center; /* 👈 Centra texto dentro de los elementos */
+}
+
+/* PERFIL Y FORMULARIO EN FILA: PERFIL A LA IZQUIERDA */
+.perfil-superior {
+  display: flex;
+  flex-direction: row; /* Perfil a la izquierda, formulario a la derecha */
+  justify-content: center; /* 👈 Centra horizontalmente el conjunto */
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 2rem;
+}
+
+/* TARJETA DE PERFIL */
+.perfil-card {
+  background-color: #ffffff;
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+  border: 2px solid #b3e5fc;
+  transition: transform 0.3s ease;
+  text-align: left; /* 👈 Alinea texto del perfil a la izquierda */
+}
+
+.perfil-card:hover {
+  transform: translateY(-5px);
+}
+
+.perfil-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.perfil-info {
+  margin-left: 0;
+}
+
+.perfil-nombre {
+  font-size: 1.8rem;
+  color: #0277bd;
+  margin: 0;
+  font-weight: 600;
+}
+
+.perfil-rol {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.perfil-body {
+  margin-bottom: 25px;
+}
+
+.perfil-descripcion {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.perfil-detalles {
+  list-style: none;
+  padding: 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.perfil-detalles li {
+  margin-bottom: 8px;
+}
+
+.perfil-boton {
+  padding: 10px 24px;
+  background-color: #4fc3f7;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.perfil-boton:hover {
+  background-color: #29b6f6;
+  transform: scale(1.05);
+}
+
+.perfil-input {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  font-size: 1rem;
+  border: 1px solid #b3e5fc;
+  border-radius: 6px;
+}
+
+.perfil-textarea {
+  width: 100%;
+  height: 80px;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #b3e5fc;
+  border-radius: 6px;
+  resize: none;
+  margin-bottom: 15px;
+}
+
+.perfil-access {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.perfil-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.perfil-icon:hover {
+  transform: scale(1.05);
+}
+
+/* FORMULARIO DE PRODUCTOS SIN FONDO */
+.perfil-formulario {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  max-width: 450px;
+  width: 100%;
+  background-color: transparent;
+  text-align: left; /* 👈 Alinea texto del formulario a la izquierda */
+}
