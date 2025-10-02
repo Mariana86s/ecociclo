@@ -4,31 +4,36 @@
       "id": "2d41",
       "nombre": "hff",
       "correo": "udj",
-      "clave": "hds"
+      "clave": "hds",
+      "rol": "usuario"
     },
     {
       "id": "21ae",
       "nombre": "Mariana",
       "correo": "mariana@gmail.com",
-      "clave": "Marii"
+      "clave": "Marii",
+      "rol": "usuario"
     },
     {
       "id": "bf23",
       "nombre": "Prueba",
       "correo": "prueba@gmail.com",
-      "clave": "123"
+      "clave": "123",
+      "rol": "admin"
     },
     {
       "id": "588e",
       "nombre": "mari",
       "correo": "mari",
-      "clave": "11"
+      "clave": "11",
+      "rol": "usuario"
     },
     {
       "id": "ae2d",
       "nombre": "mari",
       "correo": "mari",
-      "clave": "11"
+      "clave": "11",
+      "rol": "usuario"
     },
     {
       "id": "0e03",
@@ -118,6 +123,12 @@
     {
       "id": "c66a",
       "comentario": "quiero las botellas",
+      "idProducto": "10ba"
+    },
+    {
+      "id": "6e3a",
+      "nombre": "",
+      "comentario": "gg",
       "idProducto": "10ba"
     }
   ]

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "../styles/InfoProducto.css";
-import { getData, postData } from "../services/fetch";
+import { getData, postData, putData, deleteData } from "../services/fetch";
 
 const InfoProducto = ({ img, titulo, descripcion, contacto }) => {
   const [comentario, setComentario] = useState("");
@@ -9,7 +9,6 @@ const InfoProducto = ({ img, titulo, descripcion, contacto }) => {
   const [modoEdicion, setModoEdicion] = useState(null);
   const [comentarioEditado, setComentarioEditado] = useState("");
 
-  // Cargar comentarios desde db.json
   async function traerComentarios() {
     const peticion = await getData("comentarios");
     const idProducto = localStorage.getItem("idProducto");
@@ -23,7 +22,6 @@ const InfoProducto = ({ img, titulo, descripcion, contacto }) => {
     traerComentarios();
   }, []);
 
-  // Subir nuevo comentario
   async function subirComentario() {
     const objComentario = {
       nombre,
@@ -33,31 +31,28 @@ const InfoProducto = ({ img, titulo, descripcion, contacto }) => {
     await postData("comentarios", objComentario);
     setNombre("");
     setComentario("");
-    traerComentarios(); // Recargar después de enviar
+    traerComentarios();
   }
 
-  // Iniciar edición
   function iniciarEdicion(index) {
     setModoEdicion(index);
     setComentarioEditado(listaComentarios[index].comentario);
   }
 
-  // Guardar edición (solo local)
-  function guardarEdicion(index) {
+  async function guardarEdicion(index) {
+    await putData("comentarios", listaComentarios[index].id, { comentario: comentarioEditado });
     const actualizados = [...listaComentarios];
     actualizados[index].comentario = comentarioEditado;
     setListaComentarios(actualizados);
     setModoEdicion(null);
     setComentarioEditado("");
-    // Si quieres guardar en db.json, deberías usar PUT aquí
+    await traerComentarios();
   }
 
-  // Eliminar comentario de db.json
   async function eliminarComentario(idComentario) {
-    await fetch(`http://localhost:3000/comentarios/${idComentario}`, {
-      method: "DELETE",
-    });
-    await traerComentarios(); // Recargar después de eliminar
+    await deleteData("comentarios", idComentario);
+    await traerComentarios();
+    window.location.reload(); // Recarga la página automáticamente después de eliminar
   }
 
   return (
@@ -129,7 +124,7 @@ const InfoProducto = ({ img, titulo, descripcion, contacto }) => {
                   Editar
                 </button>
                 <button
-                  className="boton-eliminar"
+                  className="boton-editar"
                   onClick={() => eliminarComentario(item.id)}
                 >
                   Eliminar
