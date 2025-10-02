@@ -1,34 +1,30 @@
 {
   "usuarios": [
     {
-      "id": "2d41",
-      "nombre": "hff",
-      "correo": "udj",
-      "clave": "hds"
-    },
-    {
       "id": "21ae",
       "nombre": "Mariana",
       "correo": "mariana@gmail.com",
-      "clave": "Marii"
+      "clave": "Marii",
+      "rol": "usuario",
+      "descripcion": "Me gusta reciclar y cuidar el planeta",
+      "ubicacion": "San Jose, Costa Rica",
+      "fechaRegistro": "2024-06-10"
     },
     {
       "id": "bf23",
       "nombre": "Prueba",
       "correo": "prueba@gmail.com",
-      "clave": "123"
+      "clave": "123",
+      "rol": "admin"
     },
     {
       "id": "588e",
       "nombre": "mari",
       "correo": "mari",
-      "clave": "11"
-    },
-    {
-      "id": "ae2d",
-      "nombre": "mari",
-      "correo": "mari",
-      "clave": "11"
+      "clave": "11",
+      "rol": "usuario",
+      "descripcion": "holi",
+      "ubicacion": "Ubicación no proporcionada"
     },
     {
       "id": "0e03",
@@ -65,16 +61,6 @@
     }
   ],
   "comentarios": [
-    {
-      "id": "3f93",
-      "comentario": "sssdad",
-      "idProducto": "10ba"
-    },
-    {
-      "id": "da7c",
-      "comentario": "mariana",
-      "idProducto": "10ba"
-    },
     {
       "id": "b25e",
       "comentario": "holaa",

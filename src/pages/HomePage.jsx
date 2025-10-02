@@ -45,10 +45,6 @@ export default function HomePage() {
         </Link>
       </div>
 
-      <div className="search-container">
-        <input type="text" placeholder="Buscar Productos..." className="search-bar" />
-        <button className="search-button">Buscar</button>
-      </div>
 
       <h2 className="section-title">Categorías</h2>
       <select name="" id="" onChange={(e) => setCategoria(e.target.value)}>

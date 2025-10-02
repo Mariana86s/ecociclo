@@ -14,6 +14,22 @@ async function postData(endpoint,obj) {
   }
     
 }
+async function patchData(endpoint,obj,id) {
+  try {
+      const peticion = await fetch(`http://localhost:3001/${endpoint}/${id}`,{
+          method: 'PATCH',
+          headers:{
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(obj)
+      })
+      const respuesta = await peticion.json()
+      console.log(respuesta);
+  } catch (error) {
+     console.error(error);
+  }
+    
+}
 async function deleteData(endpoint,id) {
   try {
       const peticion = await fetch(`http://localhost:3001/${endpoint}/${id}`,{
@@ -46,4 +62,4 @@ async function getData(endpoint) {
   }
     
 }
-export {postData,getData,deleteData}
+export {postData,getData,deleteData,patchData}

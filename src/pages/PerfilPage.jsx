@@ -2,22 +2,31 @@ import { useState } from "react";
 import "../styles/perfil.css";
 import ProductosFormulario from "../components/ProductosFormulario";
 import Impacto from "../components/Impacto";
+import { patchData } from "../services/fetch";
 
 function PerfilPage() {
   const usuario = JSON.parse(localStorage.getItem("usuario"));
   const [editando, setEditando] = useState(false);
   const [nombre, setNombre] = useState(usuario.nombre);
-  const [descripcion, setDescripcion] = useState("Desarrolladora Frontend apasionada por el diseño y la accesibilidad.");
-  const [ubicacion, setUbicacion] = useState("San José, Costa Rica");
+  const [descripcion, setDescripcion] = useState(usuario.descripcion || "Descripción no proporcionada");
+  const [ubicacion, setUbicacion] = useState(usuario.ubicacion || "Ubicación no proporcionada");
   const [email, setEmail] = useState(usuario.correo);
   const [fechaIngreso, setFechaIngreso] = useState("Enero 2023");
   const [ocultar, setOcultar] = useState(true);
 
-  const handleGuardar = () => {
+  const handleGuardar = async() => {
     setEditando(false);
     setOcultar(true);
+    const objActualizado = {
+      nombre,
+      descripcion,
+      ubicacion
   };
-
+  await patchData("usuarios", objActualizado, usuario.id);
+  const usuarioActualizado = { ...usuario, ...objActualizado };
+  localStorage.setItem("usuario", JSON.stringify(usuarioActualizado));
+  alert("Perfil actualizado correctamente");
+  }
   return (
     <div className="perfil-container">
       <div className="perfil-superior">
@@ -34,7 +43,7 @@ function PerfilPage() {
               ) : (
                 <h2 className="perfil-nombre">{nombre}</h2>
               )}
-              <p className="perfil-rol">Frontend Developer</p>
+              <p className="perfil-rol">{usuario.rol}</p>
             </div>
           </div>
 
