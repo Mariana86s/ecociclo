@@ -7,14 +7,25 @@ import { getData } from "../services/fetch";
 
 const AdminPage = () => {
   const [usuarios, setUsuarios] = useState([]);
+  const [productos, setProductos] = useState([]);
+
+  async function fetchUsuarios() {
+    const response = await getData("usuarios");
+    setUsuarios(response);
+  }
+
+  async function fetchProductos() {
+    const response = await getData("productos");
+    setProductos(response);
+  }
 
   useEffect(() => {
-    async function fetchUsuarios() {
-      const response = await getData("usuarios");
-      setUsuarios(response);
-    }
     fetchUsuarios();
-    const interval = setInterval(fetchUsuarios, 5000);
+    fetchProductos();
+    const interval = setInterval(() => {
+      fetchUsuarios();
+      fetchProductos();
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -25,10 +36,10 @@ const AdminPage = () => {
         <ProductosFormulario />
       </div>
       <div className="colDer">
-        <AdminComp />
+        <AdminComp cantUsuarios={usuarios.length} cantProductos={productos.length} />
         <div className="lista-usuarios">
           <h2 className="section-title">Usuarios Registrados</h2>
-          <ListaUsuarios usuarios={usuarios} />
+          <ListaUsuarios usuarios={usuarios} setUsuarios={setUsuarios} />
         </div>
       </div>
     </div>

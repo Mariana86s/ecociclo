@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getData } from "../services/fetch";
 import "../styles/impacto.css";
 
-export default function Impacto() {
+export default function Impacto({ nuevoProducto }) {
   const [misProductos, setMisProductos] = useState([]);
 
   useEffect(() => {
@@ -13,6 +13,16 @@ export default function Impacto() {
     }
     cargarDatos();
   }, []);
+
+useEffect(() => {
+  if (nuevoProducto) {
+    const usuarioId = String(JSON.parse(localStorage.getItem("usuario")).id);
+    console.log("Nuevo producto recibido en Impacto:", nuevoProducto); 
+    if (String(nuevoProducto.idUsuario) === usuarioId) {
+      setMisProductos(prev => [...prev, nuevoProducto]);
+    }
+  }
+}, [nuevoProducto]);
 
   return (
     <div className="impacto-contenedor">
@@ -31,7 +41,7 @@ export default function Impacto() {
         ) : (
           <div className="impacto-grid">
             {misProductos.map((prod, idx) => (
-              <div key={idx} className="impacto-card">
+              <div key={prod.id || idx} className="impacto-card">
                 {prod.imagen && (
                   <img
                     src={prod.imagen}

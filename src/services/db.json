@@ -8,10 +8,38 @@
       "rol": "admin"
     },
     {
-      "id": "882a",
-      "nombre": "pepe",
-      "correo": "pepe@gmail.com",
-      "clave": "11",
+      "id": "763a",
+      "nombre": "Mariana",
+      "correo": "mariana@gmail.com",
+      "clave": "1234",
+      "rol": "usuario"
+    },
+    {
+      "id": "0fb2",
+      "nombre": "Rodolfo",
+      "correo": "rodolfo@gmail.com",
+      "clave": "1234",
+      "rol": "usuario"
+    },
+    {
+      "id": "6264",
+      "nombre": "Patricia",
+      "correo": "patricia@gmail.com",
+      "clave": "1234",
+      "rol": "usuario"
+    },
+    {
+      "id": "feee",
+      "nombre": "Patricia",
+      "correo": "patricia@gmail.com",
+      "clave": "1234",
+      "rol": "usuario"
+    },
+    {
+      "id": "c310",
+      "nombre": "Ariana",
+      "correo": "ari@gmail.com",
+      "clave": "1234",
       "rol": "usuario"
     }
   ],
@@ -63,6 +91,90 @@
       "direccion": "a  la vuelta de la esquina",
       "idUsuario": "2f48",
       "correoUsuario": "lili"
+    },
+    {
+      "id": "7353",
+      "nombre": "Vidrio",
+      "imagen": "https://humanidades.com/wp-content/uploads/2016/09/vidrio-e1559753755668.jpg",
+      "precio": "₡ 2000",
+      "categoria": "vidrio",
+      "descripcion": "el vidrio es un material reutilizable",
+      "peso": "1 kg",
+      "direccion": "en desamparados centro",
+      "idUsuario": "763a",
+      "correoUsuario": "mariana@gmail.com"
+    },
+    {
+      "id": "ca36",
+      "nombre": "Electronicos",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Kn55DIrddAU22ovLwyp57TwhhM5r57DPPg&s",
+      "precio": "₡ 3000",
+      "categoria": "electronicos",
+      "descripcion": "son productos buenos",
+      "peso": "1 kg",
+      "direccion": "desamparados",
+      "idUsuario": "763a",
+      "correoUsuario": "mariana@gmail.com"
+    },
+    {
+      "id": "9104",
+      "nombre": "botellas",
+      "imagen": "https://gtaambiental.com/wp-content/uploads/pp-pet-donde-como-reciclar-plasticos-gta-ambiental-blog-img-80.jpg",
+      "precio": "₡2000",
+      "categoria": "plastico",
+      "descripcion": "botellas reutilizadas",
+      "peso": "2 kg",
+      "direccion": "san jose centro",
+      "idUsuario": "763a",
+      "correoUsuario": "mariana@gmail.com"
+    },
+    {
+      "id": "a86e",
+      "nombre": "fjhf",
+      "imagen": "",
+      "precio": "",
+      "categoria": "",
+      "descripcion": "",
+      "peso": "",
+      "direccion": "",
+      "idUsuario": "763a",
+      "correoUsuario": "mariana@gmail.com"
+    },
+    {
+      "id": "7709",
+      "nombre": "sgh",
+      "imagen": "",
+      "precio": "",
+      "categoria": "",
+      "descripcion": "",
+      "peso": "",
+      "direccion": "",
+      "idUsuario": "763a",
+      "correoUsuario": "mariana@gmail.com"
+    },
+    {
+      "id": "9259",
+      "nombre": "jkskjdjk",
+      "imagen": "",
+      "precio": "",
+      "categoria": "",
+      "descripcion": "",
+      "peso": "",
+      "direccion": "",
+      "idUsuario": "763a",
+      "correoUsuario": "mariana@gmail.com"
+    },
+    {
+      "id": "f2f7",
+      "nombre": "",
+      "imagen": "",
+      "precio": "",
+      "categoria": "",
+      "descripcion": "",
+      "peso": "",
+      "direccion": "",
+      "idUsuario": "763a",
+      "correoUsuario": "mariana@gmail.com"
     }
   ],
   "comentarios": [

@@ -13,6 +13,7 @@ function PerfilPage() {
   const [email, setEmail] = useState(usuario.correo);
   const [fechaIngreso, setFechaIngreso] = useState("Enero 2023");
   const [ocultar, setOcultar] = useState(true);
+  const [nuevoProducto, setNuevoProducto] = useState(null);
 
   const handleGuardar = async() => {
     setEditando(false);
@@ -112,11 +113,12 @@ function PerfilPage() {
         </div>
 
         <div className="perfil-formulario">
-          {ocultar && <ProductosFormulario />}
+          {ocultar && (
+         <ProductosFormulario onProductoCreado={setNuevoProducto} />
+          )}
         </div>
       </div>
-
-      <Impacto />
+      <Impacto nuevoProducto={nuevoProducto} />
     </div>
   );
 }
