@@ -8,13 +8,6 @@
       "rol": "admin"
     },
     {
-      "id": "763a",
-      "nombre": "Mariana",
-      "correo": "mariana@gmail.com",
-      "clave": "1234",
-      "rol": "usuario"
-    },
-    {
       "id": "0fb2",
       "nombre": "Rodolfo",
       "correo": "rodolfo@gmail.com",
@@ -22,25 +15,13 @@
       "rol": "usuario"
     },
     {
-      "id": "6264",
-      "nombre": "Patricia",
-      "correo": "patricia@gmail.com",
-      "clave": "1234",
-      "rol": "usuario"
-    },
-    {
-      "id": "feee",
-      "nombre": "Patricia",
-      "correo": "patricia@gmail.com",
-      "clave": "1234",
-      "rol": "usuario"
-    },
-    {
-      "id": "c310",
+      "id": "ad9e",
       "nombre": "Ariana",
-      "correo": "ari@gmail.com",
+      "correo": "ariana@gmail.com",
       "clave": "1234",
-      "rol": "usuario"
+      "rol": "usuario",
+      "descripcion": "contadora",
+      "ubicacion": "Ubicación no proporcionada"
     }
   ],
   "productos": [
@@ -129,8 +110,8 @@
       "correoUsuario": "mariana@gmail.com"
     },
     {
-      "id": "a86e",
-      "nombre": "fjhf",
+      "id": "6d86",
+      "nombre": "dd",
       "imagen": "",
       "precio": "",
       "categoria": "",
@@ -141,40 +122,28 @@
       "correoUsuario": "mariana@gmail.com"
     },
     {
-      "id": "7709",
-      "nombre": "sgh",
-      "imagen": "",
-      "precio": "",
-      "categoria": "",
-      "descripcion": "",
-      "peso": "",
-      "direccion": "",
-      "idUsuario": "763a",
-      "correoUsuario": "mariana@gmail.com"
-    },
-    {
-      "id": "9259",
-      "nombre": "jkskjdjk",
-      "imagen": "",
-      "precio": "",
-      "categoria": "",
-      "descripcion": "",
-      "peso": "",
-      "direccion": "",
-      "idUsuario": "763a",
-      "correoUsuario": "mariana@gmail.com"
-    },
-    {
-      "id": "f2f7",
+      "id": "8b08",
       "nombre": "",
       "imagen": "",
       "precio": "",
       "categoria": "",
       "descripcion": "",
       "peso": "",
-      "direccion": "",
+      "direccion": "gg",
       "idUsuario": "763a",
       "correoUsuario": "mariana@gmail.com"
+    },
+    {
+      "id": "956d",
+      "nombre": "Botellas",
+      "imagen": "https://www.infinitiaresearch.com/wp-content/uploads/2021/05/tipos-plasticos-2.png",
+      "precio": "2000",
+      "categoria": "plastico",
+      "descripcion": "Botellas reutilizadas ",
+      "peso": "1 kg",
+      "direccion": "San jose",
+      "idUsuario": "ad9e",
+      "correoUsuario": "ariana@gmail.com"
     }
   ],
   "comentarios": [
@@ -189,39 +158,10 @@
       "idProducto": "10ba"
     },
     {
-      "id": "b82f",
-      "comentario": "jj",
-      "idProducto": "10ba"
-    },
-    {
-      "id": "1d13",
-      "comentario": "ss",
-      "idProducto": "10ba"
-    },
-    {
-      "id": "c907",
-      "comentario": "sss",
-      "idProducto": "10ba"
-    },
-    {
-      "id": "8b89",
-      "comentario": "jj",
-      "idProducto": "10ba"
-    },
-    {
-      "id": "7cf7",
-      "comentario": "",
-      "idProducto": "10ba"
-    },
-    {
-      "id": "268f",
-      "comentario": "jss",
-      "idProducto": "10ba"
-    },
-    {
-      "id": "c66a",
-      "comentario": "quiero las botellas",
-      "idProducto": "10ba"
+      "id": "41b6",
+      "nombre": "pepe",
+      "comentario": "muy buen producto ",
+      "idProducto": "ca36"
     }
   ]
 }

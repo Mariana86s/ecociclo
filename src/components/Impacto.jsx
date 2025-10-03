@@ -17,7 +17,7 @@ export default function Impacto({ nuevoProducto }) {
 useEffect(() => {
   if (nuevoProducto) {
     const usuarioId = String(JSON.parse(localStorage.getItem("usuario")).id);
-    console.log("Nuevo producto recibido en Impacto:", nuevoProducto); 
+    console.log("Nuevo producto recibido", nuevoProducto); 
     if (String(nuevoProducto.idUsuario) === usuarioId) {
       setMisProductos(prev => [...prev, nuevoProducto]);
     }

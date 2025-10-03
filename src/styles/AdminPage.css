@@ -1,11 +1,9 @@
-/* AdminPage.css - Estilos mejorados: columnas a la par, mismo tamaño y sin fondo blanco fuerte */
-
 :root{
-  --page-start: #eaf6ff;   /* fondo sutil */
+  --page-start: #eaf6ff; 
   --page-end:   #f7fbfd;
-  --panel-left: linear-gradient(180deg,#f0fbf9,#e8f7f2); /* izquierda (verde suave) */
-  --panel-right: linear-gradient(180deg,#f7f6ff,#f0ecff); /* derecha (violeta suave) */
-  --card-gradient: linear-gradient(135deg,#3b82f6,#06b6d4); /* tarjetas de métricas */
+  --panel-left: linear-gradient(180deg,#f0fbf9,#e8f7f2); 
+  --panel-right: linear-gradient(180deg,#f7f6ff,#f0ecff); 
+  --card-gradient: linear-gradient(135deg,#3b82f6,#06b6d4); 
   --text: #0f1724;
   --muted: #6b7280;
   --shadow: 0 8px 24px rgba(12,24,40,0.06);
@@ -13,30 +11,27 @@
   font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
 }
 
-/* Contenedor general */
 .contAdmin{
   display: flex;
   gap: 24px;
   padding: 32px;
   min-height: 100vh;
-  align-items: stretch; /* las columnas tendrán la misma altura */
+  align-items: stretch; 
   box-sizing: border-box;
   background: linear-gradient(180deg,var(--page-start), var(--page-end));
 }
 
-/* Columnas: ambas con flex:1 para ser del mismo tamaño */
 .colIzq, .colDer{
-  flex: 1;                /* igual ancho */
+  flex: 1;              
   border-radius: var(--radius);
   padding: 22px;
   display: flex;
   flex-direction: column;
   gap: 18px;
   box-shadow: var(--shadow);
-  min-height: 520px;      /* igual altura mínima */
+  min-height: 520px;     
 }
 
-/* Diferenciar ligeramente con tonos suaves (NO blanco sólido) */
 .colIzq{
   background: var(--panel-left);
   border: 1px solid rgba(10,20,30,0.03);
@@ -46,7 +41,6 @@
   border: 1px solid rgba(10,20,30,0.03);
 }
 
-/* Titulos seccion */
 .section-title{
   font-size: 18px;
   color: var(--text);
@@ -54,21 +48,18 @@
   font-weight: 700;
 }
 
-/* Admin panel wrapper */
 .admin-panel{
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-/* Header del panel (titulo + acciones si las tuvieras) */
 .admin-header{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Titulo principal del panel */
 .admin-titulo{
   font-size: 20px;
   font-weight: 800;
@@ -76,15 +67,13 @@
   margin: 0;
 }
 
-/* Métricas: uso de grid para igualar tarjetas */
 .admin-metricas{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  align-items: stretch; /* tarjetas misma altura */
+  align-items: stretch; 
 }
 
-/* Tarjeta de métrica */
 .admin-card{
   border-radius: 12px;
   padding: 18px;
@@ -96,8 +85,6 @@
   color: #fff;
   background: var(--card-gradient);
 }
-
-/* texto dentro de card */
 .admin-label{
   font-size: 13px;
   opacity: 0.95;
@@ -108,40 +95,33 @@
   margin-top: 8px;
 }
 
-/* Lista de usuarios: estilo limpio que encaja con fondo no blanco */
 .lista-usuarios{
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 12px;
   border-radius: 12px;
-  /* fondo transparente: ya está dentro de colDer */
 }
-
-/* Contenedor que debe envolver el map de usuarios */
 .user-list{
   display: flex;
   flex-direction: column;
   gap: 10px;
   max-height: 360px;
   overflow: auto;
-  padding-right: 6px; /* espacio para scrollbar */
+  padding-right: 6px; 
 }
 
-/* Cada elemento usuario */
 .user-card{
   display: flex;
   gap: 12px;
   align-items: center;
   padding: 12px;
   border-radius: 10px;
-  /* ligero contraste, sin blanco sólido */
   background: rgba(255,255,255,0.6); 
   box-shadow: 0 4px 10px rgba(12,24,40,0.04);
   border: 1px solid rgba(10,20,30,0.03);
 }
 
-/* Avatar simple */
 .user-avatar{
   width: 44px;
   height: 44px;
@@ -154,11 +134,9 @@
   color: #102a43;
 }
 
-/* textos usuario */
 .user-name{ font-weight: 700; color: var(--text); }
 .user-email{ font-size: 13px; color: var(--muted); }
 
-/* responsive: columnas apilan en pantallas pequeñas */
 @media (max-width: 920px){
   .contAdmin{ flex-direction: column; padding: 18px; }
   .colIzq, .colDer{ min-height: auto; }

@@ -20,24 +20,27 @@ const ProductosFormulario = ({ onProductoCreado }) => {
       descripcion: descripcionProducto,
       peso: pesoProducto,
       direccion: direccion,
-      idUsuario: localStorage.getItem("idUsuario"),
+      idUsuario: JSON.parse(localStorage.getItem("usuario")).id,
       correoUsuario: JSON.parse(localStorage.getItem("usuario")).correo
     }
 
     const creado = await postData("productos", obj)
     console.log("Producto enviado correctamente", creado);
 
-    if (onProductoCreado) {
-  console.log("Producto enviado al perfil:", creado);
-  onProductoCreado(creado);
+    if (creado) {
+      if (onProductoCreado) {
+        console.log("Producto enviado al perfil:", creado);
+        onProductoCreado(creado);
+      }
+      alert("Producto agregado correctamente");
+      setNombreProducto("")
+      setUrlImagen("")
+      setPrecio("")
+      setCategoria("")
+      setDescripcion("")
+      setPeso("")
+      setDireccion("")
     }
-    setNombreProducto("")
-    setUrlImagen("")
-    setPrecio("")
-    setCategoria("")
-    setDescripcion("")
-    setPeso("")
-    setDireccion("")
   }
 
   return (
